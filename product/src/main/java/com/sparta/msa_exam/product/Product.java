@@ -20,5 +20,4 @@ public class Product {
 
     private Integer supplyPrice;
 
-    // Getters and Setters
 }
