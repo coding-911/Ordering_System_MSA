@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: <RDS_ADDRESS>
+    username: <RDS_USERNAME>
+    password: <RDS_PASSWORD>
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate.format_sql: false
