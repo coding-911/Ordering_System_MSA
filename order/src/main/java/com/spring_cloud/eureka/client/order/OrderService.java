@@ -1,6 +1,7 @@
 package com.spring_cloud.eureka.client.order;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,6 +27,7 @@ public class OrderService {
         return order;
     }
 
+    @Cacheable(cacheNames = "order_cache")
     public Optional<Order> getOrderById(Long orderId) {
         return orderRepository.findById(orderId);
     }
